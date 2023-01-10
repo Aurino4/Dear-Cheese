@@ -1,0 +1,70 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /*background:black;*/
+}
+.parrafo {
+    background-color: yellow;
+    color:black;
+    text-align: center;
+    font-weight: bold;
+    height: 40px;
+    padding:10px 0px;
+}
+.logo {
+    margin-left: 50px;
+}
+
+.menu {
+    list-style-type: none;
+    margin-top:50px;
+    
+
+
+  }
+.menu li {
+    float: left;
+    text-align:center;
+    width: 200px;
+    
+    
+}
+.menu a {
+    text-decoration:none;
+    color:yellow
+}
+  header {
+   display: flex;
+   background-color: black;
+   display: fixed;
+   
+   
+   
+  }
+  .idiomas {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+   margin-left:100px; 
+   /* margin-top: 30px;*/
+    
+  }
+  .idiomas img {
+   /* margin-right: 500px;*/
+   display: flex;
+   justify-content: space-between;
+   margin-right: 30px;
+
+  }
+  h1 {
+    color:yellow;
+    text-align: center;
+  }
+  main p{
+    color: white;
+    text-align: center;
+    margin-top:50px;
+  }
