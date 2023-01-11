@@ -1,5 +1,5 @@
 //const shopcontent=document.getElementById("prueba"); //aqui muestra el div prueba del html , coge el elemento por id//
-const queso=[  //1ero creamos el array un json que dentro va el id y el nombre
+const almacendequesos=[  //1ero creamos el array un json que dentro va el id y el nombre
     {
         id:1,
         nombre:"Queso rojo de cabra",
@@ -61,7 +61,7 @@ const queso=[  //1ero creamos el array un json que dentro va el id y el nombre
 ];
 //queso.forEach((product)=>{ //recorremos todo el array por el foreach y cada vez que recorremos el array nos crean en htm un h3 y le metemos el nombre del producto
   //  let content=document.createElement("div");
-    //content.innerHTML=`<h3>${product.id}</h3>
+    //content.innerHTML=`<h3 class=>${product.id}</h3>
     //content.innerHTML=`<img src ="${product.images}"> 
     //`; //creando etiqueta imagen . 
 //shopcontent.append(content); //el resultado que te da es para meterlo en un div padre que se crea en html primero, se ve en inspeccionar elemento 
@@ -70,6 +70,10 @@ const queso=[  //1ero creamos el array un json que dentro va el id y el nombre
 
 //ESTO ES UNA PRUEBA //
 
+//queso es la array , foreach ( porfavo hazme un bucle) de que de los elementos que se llaman productos y cada productos
+//creamos un elemento div que se llama content se guarda como variable. 
+//Este content añadismos dentro del su html añadimos el h3 que tiene el id de la array de queso.
+//el append guarda el contentido dentro del shopconten que es el div que tiene el contenido prueba.
 
 
 
