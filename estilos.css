@@ -3,7 +3,9 @@
     box-sizing: border-box;
 }
 
-
+body {
+  background-color: black;
+}
 
 .parrafo {
     background-color: yellow;
@@ -28,6 +30,7 @@
     float: left;
     text-align:center;
     width: 200px;
+    color:yellow
     
     
 }
@@ -66,4 +69,26 @@
     color: white;
     text-align: center;
     margin-top:50px;
+  }
+
+  #prueba {
+    display:flex;
+    position: absolute;
+    margin-top: 800px;
+    margin-left: 100px;
+    width: 90%;
+  }
+  .mostrar {
+width:auto
+  }
+  .color4 {
+    color:orangered;
+  }
+  .color1{
+    color:orangered;
+
+  }
+  .color2{
+    color: orangered;
+
   }
