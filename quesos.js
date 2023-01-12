@@ -100,7 +100,7 @@ const almacendequesos = [  //1ero creamos el array un json que dentro va el id y
 //    });
 // intento.addEventListener("click",()=>{
 // almacendequesos.forEach((product)=>{
-//     if (product.categoria =="pruebas") {
+    
 //         let content=document.createElement("div");
 //         content.className="mostrar";
 //         content.innerHTML=`
@@ -109,44 +109,62 @@ const almacendequesos = [  //1ero creamos el array un json que dentro va el id y
 //         <p>${product.descripcion}</p>
 //         <p>${product.precio}</p>`;
 //         shopcontent.append(content);
-//         let comprar=document.createElement("button");
+//         let comprar=document.createElement("button");         
 //         comprar.innerText="Comprar";
 //         comprar.className="color";
 //         content.append(comprar);
-//     }
-//     //console.info(product)
+//         comprar.addEventListener("click",()=> {
+//             carrito.push ({
+//                 id:product.id,
+//                 nombre:product.nombre,
+//                 precio:product.precio,
+//                 categoria:product.categoria,
 //         });
-
+    
+//     console.info(carrito)
+//         });
 //     });
 
+    
+
 //----------------------------------------Categoria:Exclusivos----------------------------------//
-var limite = true; //asi limitamos que haciendo click al llamarle true , cada vez que lo haga que salgan los mismos productos mil veces//
-exclusivo.addEventListener("click", () => {
-    if (limite == true) {
-        almacendequesos.forEach((product) => {
+var limite=true;
+exclusivo.addEventListener("click", ()=> {
+    if (limite==true) {
+        almacendequesos.forEach((product)=> {
             if (product.categoria == "Exclusivos") {
-                let content = document.createElement("div");
-                content.className = "cajas";
-                content.innerHTML = `
-            <img src="${product.foto}" width="300px">
-            <h3 class=color4>${product.nombre}</h3>
+                let content=document.createElement("div");
+                content.className ="cajas";
+                content.innerHTML=`
+                <img src="${product.foto}" width="300px">
+            <h3 class=color1>${product.nombre}</h3>
             <p>${product.descripcion}</p>
-            <p>${product.precio}</p>`;
-
-                shopcontent.append(content);
-                let comprar = document.createElement("button");
-                comprar.innerText = "Comprar";
-                comprar.className = "comprar";
-                content.append(comprar);
+            <p>${product.precio}</p>`
+            shopcontent.append(content);
+            let comprar =document.createElement("button");
+            console.log(comprar);
+           comprar.innerText = "Comprar";
+            comprar.className = "Comprar";
+              //  comprar.innerHTML=`<button class="comprar">comprar</button>`
+            content.append(comprar);
+            comprar.addEventListener ("click",() => {
+                carrito.push ({
+                 id:product.id,
+                 nombre:product.nombre,
+                 precio:product.precio,
+                 foto:product.foto,
+                    
+                });
+                alert(product.id+ " " +product.nombre+ " "+ product.foto);
+               console.log(carrito);
+            });
             }
-            limite = false;
-
+            limite=false;
         });
-    }
+        
 
-
-
-    console.log(product);
+        
+    };
 });
 
 
@@ -208,6 +226,8 @@ productosdestacados.addEventListener("click", () => {
 
     console.log(product);
 });
+
+
 
 
 
