@@ -139,10 +139,10 @@ exclusivo.addEventListener("click", ()=> {
                 <img src="${product.foto}" width="300px">
             <h3 class=color1>${product.nombre}</h3>
             <p>${product.descripcion}</p>
-            <p>${product.precio}</p>`
+            <p class="price">${product.precio}</p>`
             shopcontent.append(content);
             let comprar =document.createElement("button");
-            console.log(comprar);
+           // console.log(comprar);
            comprar.innerText = "Comprar";
             comprar.className = "Comprar";
               //  comprar.innerHTML=`<button class="comprar">comprar</button>`
@@ -155,8 +155,7 @@ exclusivo.addEventListener("click", ()=> {
                  foto:product.foto,
                     
                 });
-                alert(product.id+ " " +product.nombre+ " "+ product.foto);
-               console.log(carrito);
+                
             });
             }
             limite=false;

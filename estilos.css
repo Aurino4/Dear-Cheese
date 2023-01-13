@@ -90,3 +90,108 @@
     color: orangered;
 
   }
+
+  /*modal content*/
+.modal-container {
+  width: 80%;
+  margin: 0 10%;
+  max-height: 88vh;
+  color: #fff;
+  background-color: greenyellow;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /*for the top*/
+  position: fixed;
+  overflow: auto;
+  z-index: 9;
+  top: 12vh;
+  scrollbar-color: none;
+}
+
+.modal-container::-webkit-scrollbar {
+  display: none;
+}
+.modal-header {
+  display: flex;
+  justify-content: space-around;
+  /*background-color: #0a0909;*/
+  color: #fff;
+  width: 100%;
+}
+
+.modal-header-title {
+  justify-self: start;
+}
+
+.modal-header-button {
+  cursor: pointer;
+}
+
+.modal-container > .modal-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 70%;
+  margin: 10px;
+}
+
+.modal-container > div > img {
+  height: 120px;
+  width: 120px;
+}
+
+.total-content {
+  font-size: 25px;
+  padding: 20px;
+  text-align: center;
+  padding-top: 20px;
+}
+
+/*se agregaron unas lineas de css con media querys para que se adapte mejor al responsive :)*/
+
+@media only screen and (max-width: 750px) {
+  .modal-container {
+    width: 100%;
+    margin: 0;
+    min-height: 88vh;
+  }
+
+  .modal-container > .modal-content {
+    justify-content: space-between;
+    width: 100%;
+    margin: 2px;
+  }
+
+  .modal-container > div > img {
+    height: 80px;
+    width: 80px;
+  }
+}
+
+/*delete button product*/
+.delete-product {
+  cursor: pointer;
+}
+
+/*CarritoCounter*/
+.cantidad-carrito {
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  font-size: 12px;
+  padding: 4px;
+  top: 37px;
+  right: 14px;
+  position: absolute;
+  display: none;
+}
+
+.sumar {
+  cursor: pointer;
+}
+
+.restar {
+  cursor: pointer;
+}
