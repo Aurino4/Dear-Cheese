@@ -96,12 +96,12 @@ main p {
 }
 
 .color1 {
-  color: orangered;
+  color:aqua;
 
 }
 
 .color2 {
-  color: orangered;
+  color: aqua;
 
 }
 
@@ -110,7 +110,7 @@ main p {
   width: 80%;
   margin: 0 10%;
   max-height: 88vh;
-  color: #fff;
+  color:black;
   background-color: greenyellow;
   display: flex;
   flex-direction: column;
@@ -131,7 +131,7 @@ main p {
   display: flex;
   justify-content: space-around;
   /*background-color: #0a0909;*/
-  color: #fff;
+  color: rgba(255, 255, 255, 0.411);
   width: 100%;
 }
 
@@ -233,7 +233,7 @@ main p {
   font-size: 20px;
   background-color: white;
   border-radius: 6px;
-  border: 2px solid 
+  border: 2px solid ;
   background-image: url("/Dear-Cheese/img/carrito-de-compras.png");
   background-size: 30px 30px;
   background-repeat: no-repeat;
@@ -241,8 +241,95 @@ main p {
   background-position: right;
   width: 300px;
 }
-
+.comprar:hover {
+  background-color: yellowgreen;
+}
 .price {
   margin-top: 10px;
+  margin-bottom: 10px;
+}
+#mostrarexclusivos{
+  display:flex;
+
+justify-content: space-around;
+  
+ align-items: center;
+ margin-top: 40px;
+height: 400px;
+margin-top: 100px;
+
+
+}
+.pexclusivos{
+width:200px;
+margin:auto;
+
+}
+.Comprarexclusivos {
+  margin-bottom: 30px;
+  text-decoration: none;
+  padding: 10px;
+  font-weight: 200;
+  font-size: 20px;
+  background-color: white;
+  border-radius: 6px;
+  border: 2px solid ;
+  background-image: url("/Dear-Cheese/img/carrito-de-compras.png");
+  background-size: 30px 30px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right;
+  width: 300px;
+  
+}
+.Comprarexclusivos:hover{
+  background-color: yellowgreen;
+}
+.cajas{
+  text-align: center;
+  height: 400px;
+  margin:auto
+}
+.ComprarNovedades{
+  margin-bottom: 30px;
+  text-decoration: none;
+  padding: 10px;
+  font-weight: 200;
+  font-size: 20px;
+  background-color: white;
+  border-radius: 6px;
+  border: 2px solid ;
+  background-image: url("/Dear-Cheese/img/carrito-de-compras.png");
+  background-size: 30px 30px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right;
+  width: 300px;
+
+}
+#mostrarnovedades {
+  display: flex;
+}
+.ComprarNovedades:hover {
+  background-color: yellowgreen;
+
+}
+.pnovedades {
+color:orangered;
+
+}
+.priceN{
+  margin-top: 10px;
+margin-bottom: 10px;
+}
+#mostrardestacados{
+  display: flex;
+}
+.pdestacados{
+  color:orangered;
+ 
+}
+.priceD{
+  margin-top:10px ;
   margin-bottom: 10px;
 }

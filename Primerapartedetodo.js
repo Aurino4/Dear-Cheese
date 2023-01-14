@@ -5,14 +5,14 @@ const showAlert = document.getElementById("showAlert");
 const cantidadCarrito = document.getElementById("cantidadCarrito");
 
 var carrito = JSON.parse(localStorage.getItem("carrito")) || [];
- //esta línea de código esta recuperando un objeto guardado en el almacenamiento del navegador con nombre "carrito" y lo esta convirtiendo en un objeto javascript. En caso de no existir el objeto, se asigna un arreglo vacío a la variable "carrito"
+//esta línea de código esta recuperando un objeto guardado en el almacenamiento del navegador con nombre "carrito" y lo esta convirtiendo en un objeto javascript. En caso de no existir el objeto, se asigna un arreglo vacío a la variable "carrito"
 almacendequesos.forEach((product) => {
     let content = document.createElement("div");
     content.className = "card";
     content.innerHTML = `
       <img src="${product.foto}" width="300px">
       <h3>${product.nombre}</h3>
-      <p class="price">${product.precio} "€"</p>`;
+      <p class="price">${product.precio} €</p>`;
   
     shopContent.append(content);
   
