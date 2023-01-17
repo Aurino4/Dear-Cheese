@@ -4,8 +4,9 @@
 }
 
 body{
-  background-color:#4e3b31
-;
+  background-color:#4e3b31;
+  
+ 
 }
 
 
@@ -25,30 +26,31 @@ body{
 .menu {
   list-style-type: none;
   margin-top: 50px;
+  
+  
 
 
 
 }
 
 .menu li {
-  float: left;
+  margin-right: 10px;
   text-align: center;
   width: 200px;
-  color: yellow
+  color: yellow;
+  padding: 0px 10px;
+  display: inline;
 }
 
 .menu a {
   text-decoration: none;
-  color: yellow
+  color: yellow;
 }
 
 header {
   display: flex;
   display: fixed;
   background-color: #4e3b31;
-
-
-
 }
 
 .idiomas {
@@ -71,12 +73,15 @@ header {
 h1 {
   color: yellow;
   text-align: center;
+  
 }
 
 main p {
   color: white;
   text-align: center;
-  margin-top: 50px;
+ 
+  width:800px;
+  margin:50px auto;
 }
 
 #prueba {
@@ -214,15 +219,17 @@ main p {
 #shopContent {
   display: flex;
   flex-wrap: wrap;
-  max-width: 100%;
+ 
   background-color:#4e3b31;
 
   text-align: center;
-  padding: 100px;
+  /*padding: 100px;*/
 }
 
 .card {
   margin-right: 20px;
+  width:500px;
+  
 }
 
 .comprar {
@@ -234,7 +241,7 @@ main p {
   background-color: white;
   border-radius: 6px;
   border: 2px solid ;
-  background-image: url("/Dear-Cheese/img/carrito-de-compras.png");
+  background-image: url("/img/carrito-de-compras.png");
   background-size: 30px 30px;
   background-repeat: no-repeat;
   background-size: contain;
@@ -247,6 +254,8 @@ main p {
 .price {
   margin-top: 10px;
   margin-bottom: 10px;
+  text-align: center;
+  width: 300px;
 }
 #mostrarexclusivos{
   display:flex;
@@ -286,9 +295,24 @@ margin:auto;
   background-color: yellowgreen;
 }
 .cajas{
+  margin: 5px;
   text-align: center;
-  height: 400px;
-  margin:auto
+  height: 300px;
+  margin-top: 20px;
+ margin-bottom: 10px;
+ padding: 30px;
+ 
+ margin-right: 20px;
+  width: 100px;
+  flex-basis: 20.33%;
+/*------------------------------*/
+display: flex;
+flex-wrap: wrap;
+ 
+  background-color:#4e3b31;
+
+  text-align: center;
+  
 }
 .ComprarNovedades{
   margin-bottom: 30px;
@@ -313,15 +337,14 @@ margin:auto;
 .ComprarNovedades:hover {
   background-color: yellowgreen;
 
+
 }
 .pnovedades {
 color:orangered;
+width: 300px;
 
 }
-.priceN{
-  margin-top: 10px;
-margin-bottom: 10px;
-}
+
 #mostrardestacados{
   display: flex;
 }
@@ -329,7 +352,8 @@ margin-bottom: 10px;
   color:orangered;
  
 }
-.priceD{
-  margin-top:10px ;
-  margin-bottom: 10px;
+
+.pcategorias{
+  color:orangered;
+  width:300px;
 }

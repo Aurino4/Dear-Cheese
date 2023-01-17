@@ -5,120 +5,171 @@ const exclusivo = document.getElementById("exclusivo");
 const novedad = document.getElementById("novedad");
 const productosdestacados = document.getElementById("productosdestacados")
 const mostrar = document.getElementById("mostrarexclusivos");
-const mostrarnovedades= document.getElementById("mostrarnovedades");
-const mostrardestacados = document.getElementById ("mostrardestacados");
+const mostrarnovedades = document.getElementById("mostrarnovedades");
+const mostrardestacados = document.getElementById("mostrardestacados");
+const todos=document.getElementById("todos");
+//---------------------------------Todos--------------------------------------------------------//
+todos.addEventListener("click", () => {
+
+    shopContent.innerHTML = "" //borrar todo el contenido dentro del div principal
+    almacendequesos.forEach((product) => {
+        
+            let content = document.createElement("div");
+            content.className = "cajas";
+            content.innerHTML = `
+                <img src="${product.foto}" width="300px">
+            <h3 class=color1>${product.nombre}</h3>
+            <p class="pcategorias">${product.descripcion}</p>
+            <p class="price">${product.precio} €</p>`
+            shopContent.append(content); // añadimos div al index con el nombre mostrarexclusivos para que solo muestre los exclusivos
+
+
+            let comprar = document.createElement("button");
+            // console.log(comprar);
+            comprar.innerText = "Comprar";
+            comprar.className = "Comprar";
+            //  comprar.innerHTML=`<button class="comprar">comprar</button>`
+            content.append(comprar);
+            comprar.addEventListener("click", () => {
+
+                carrito.push({
+                    id: product.id,
+                    nombre: product.nombre,
+                    precio: product.precio,
+                    foto: product.foto,
+                    cantidad: product.cantidad,
+
+                });
+
+            });
+        
+
+    });
+
+});
+
+
+
+
 
 
 //----------------------------------------Categoria:Exclusivos----------------------------------//
-var limite=true;
-exclusivo.addEventListener("click", ()=> {
-   
-    
-   
-    if (limite==true) {
-        shopContent.style.visibility = 'hidden'; //para ocultar todos los quesos y que se vean los exclusivos
-        almacendequesos.forEach((product)=> {
-            if (product.categoria == "Exclusivos") {
-                let content=document.createElement("div");
-                content.className ="cajas";
-                content.innerHTML=`
+exclusivo.addEventListener("click", () => {
+
+    shopContent.innerHTML = "" //borrar todo el contenido dentro del div principal
+    almacendequesos.forEach((product) => {
+        if (product.categoria == "Exclusivos") {
+            let content = document.createElement("div");
+            content.className = "cajas";
+            content.innerHTML = `
                 <img src="${product.foto}" width="300px">
             <h3 class=color1>${product.nombre}</h3>
-            <p class="pexclusivos">${product.descripcion}</p>
+            <p class="pcategorias">${product.descripcion}</p>
             <p class="price">${product.precio} €</p>`
-            mostrarexclusivos.append(content); // añadimos div al index con el nombre mostrarexclusivos para que solo muestre los exclusivos
-           
-        
-            let comprar =document.createElement("button");
-           // console.log(comprar);
-           comprar.innerText = "Comprar";
-            comprar.className = "Comprarexclusivos";
-              //  comprar.innerHTML=`<button class="comprar">comprar</button>`
-            content.append(comprar);
-            comprar.addEventListener ("click",() => {
-                
-                carrito.push ({
-                 id:product.id,
-                 nombre:product.nombre,
-                 precio:product.precio,
-                 foto:product.foto,
-                    
-                });
-                
-            });
-            }
-            limite=false;
-        });
-        
+            shopContent.append(content); // añadimos div al index con el nombre mostrarexclusivos para que solo muestre los exclusivos
 
-        
-    };
+
+            let comprar = document.createElement("button");
+            // console.log(comprar);
+            comprar.innerText = "Comprar";
+            comprar.className = "Comprarexclusivos";
+            //  comprar.innerHTML=`<button class="comprar">comprar</button>`
+            content.append(comprar);
+            comprar.addEventListener("click", () => {
+
+                carrito.push({
+                    id: product.id,
+                    nombre: product.nombre,
+                    precio: product.precio,
+                    foto: product.foto,
+                    cantidad: product.cantidad,
+
+                });
+
+            });
+        }
+
+    });
+
+
+
+
 });
 
 //-----------------------------------------Categoria Novedades--------------------------------------------
-var alcance = true; // por cada categoria acordarse de cambiar el nombre de la variable
+
 novedad.addEventListener("click", () => {
-    shopContent.style.visibility = 'hidden';
-    mostrarexclusivos.style.visibility = 'hidden';
-    if (alcance == true) {
-        almacendequesos.forEach((product) => {
-            if (product.categoria == "Novedades") {
-                let content = document.createElement("div");
-                content.className = "cajas";
-                content.innerHTML = `
+    shopContent.innerHTML = ""
+    almacendequesos.forEach((product) => {
+        if (product.categoria == "Novedades") {
+            let content = document.createElement("div");
+            content.className = "cajas";
+            content.innerHTML = `
             <img src="${product.foto}" width="300px">
             <h3 class=color1>${product.nombre}</h3>
-            <p class="pnovedades">${product.descripcion}</p>
-            <p class="priceN">${product.precio} €</p>`;
+            <p class="pcategorias">${product.descripcion}</p>
+            <p class="price">${product.precio} €</p>`;
 
-            mostrarnovedades.append(content);
-                let comprar = document.createElement("button");
-                comprar.innerText = "Comprar";
-                comprar.className = "ComprarNovedades";
-                content.append(comprar);
-            }
-            alcance = false;
+            shopContent.append(content);
+            let comprar = document.createElement("button");
+            comprar.innerText = "Comprar";
+            comprar.className = "ComprarNovedades";
+            content.append(comprar);
+            content.append(comprar);
+            comprar.addEventListener("click", () => {
 
-        });
-        
-    }
+                carrito.push({
+                    id: product.id,
+                    nombre: product.nombre,
+                    precio: product.precio,
+                    foto: product.foto,
+                    cantidad: product.cantidad,
+
+                });
+
+            });
+        }
 
 
-
-    
+    });
 });
 //------------------------------------------Categoria Productos destacados ----------------------------------
-var deaquinopasas = true; // por cada categoria acordarse de cambiar el nombre de la variable
-productosdestacados.addEventListener("click", () => {
-    if (deaquinopasas == true) {
-        almacendequesos.forEach((product) => {
-    shopContent.style.visibility = 'hidden';
-    mostrarexclusivos.style.visibility = 'hidden';
-    mostrarnovedades.style.visibility = 'hidden';
 
-            if (product.categoria == "Productos destacados") {
-                let content = document.createElement("div");
-                content.className = "cajas";
-                content.innerHTML = `
+productosdestacados.addEventListener("click", () => {
+    shopContent.innerHTML = ""
+    almacendequesos.forEach((product) => {
+        if (product.categoria == "Productos destacados") {
+            let content = document.createElement("div");
+            content.className = "cajas";
+            content.innerHTML = `
             <img src="${product.foto}" width="300px">
             <h3 class=color2>${product.nombre}</h3>
-            <p class="pdestacados">${product.descripcion}</p>
-            <p class="priceD">${product.precio} €</p>`;
+            <p class="pcategorias">${product.descripcion}</p>
+            <p class="price">${product.precio} €</p>`;
 
-                mostrardestacados.append(content);
-                let comprar = document.createElement("button");
-                comprar.innerText = "Comprar";
-                comprar.className = "comprar";
-                content.append(comprar);
-            }
-            deaquinopasas = false;
+            shopContent.append(content);
+            let comprar = document.createElement("button");
+            comprar.innerText = "Comprar";
+            comprar.className = "comprar";
+            content.append(comprar);
+            content.append(comprar);
+            comprar.addEventListener("click", () => {
 
-        });
-    }
+                carrito.push({
+                    id: product.id,
+                    nombre: product.nombre,
+                    precio: product.precio,
+                    foto: product.foto,
+                    cantidad: product.cantidad,
+
+                });
+
+            });
+        }
 
 
+    });
 
-   
 });
 
 

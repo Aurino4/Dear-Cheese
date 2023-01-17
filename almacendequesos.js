@@ -32,7 +32,7 @@ const almacendequesos = [  //1ero creamos el array un json que dentro va el id y
     {
         id: 4,
         nombre: "Queso de oveja La Colllada",
-        descripcion: " La Colllada es un precioso pueblo donde pastan las ovejas que producen la leche característica que imprime una personalidad exclusiva a nuestro queso",
+        descripcion: " La Colllada es un precioso pueblo donde pastan las ovejas que producen una leche característica de gran personalidad",
         precio: 14.90,
         foto: "img/quesodeovejalacollada.jpg",
         categoria: "Productos destacados",
@@ -71,7 +71,7 @@ const almacendequesos = [  //1ero creamos el array un json que dentro va el id y
     {
         id: 8,
         nombre: "Queso Afuegal Pitu",
-        descripcion: " Maravilloso queso elaborado según las tradiciones centenarias de la comarca dl Pitu",
+        descripcion: " Maravilloso queso elaborado según las tradiciones centenarias de la comarca dl Pitu con un gran sabor delicado y un gran bouquet",
         precio: 12.30,
         foto: "img/quesoafuegalpitu.jpg",
         categoria: "Novedades",
