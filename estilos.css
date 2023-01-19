@@ -38,8 +38,13 @@ body{
   text-align: center;
   width: 200px;
   color: yellow;
-  padding: 0px 10px;
+  padding: 10px 10px;
   display: inline;
+}
+
+.menu li:hover {
+  cursor:pointer;
+  background-color: blueviolet;
 }
 
 .menu a {
@@ -96,19 +101,15 @@ main p {
   width: auto;
 }
 
-.color4 {
-  color: orangered;
-}
+
 
 .color1 {
   color:aqua;
+  margin-top: 20px;
 
 }
 
-.color2 {
-  color: aqua;
 
-}
 
 /*modal content*/
 .modal-container {
@@ -219,6 +220,7 @@ main p {
 #shopContent {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
  
   background-color:#4e3b31;
 
@@ -228,7 +230,8 @@ main p {
 
 .card {
   margin-right: 20px;
-  width:500px;
+  /*width:500px;*/
+  margin: 10px 10px;
   
 }
 
@@ -356,4 +359,13 @@ width: 300px;
 .pcategorias{
   color:orangered;
   width:300px;
+}
+.modal-content p{
+  color:black;
+}
+
+.footer {
+text-align: center;
+font-weight: bold;
+margin-bottom: 20px;
 }

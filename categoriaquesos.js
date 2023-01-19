@@ -15,10 +15,10 @@ todos.addEventListener("click", () => {
     almacendequesos.forEach((product) => {
         
             let content = document.createElement("div");
-            content.className = "cajas";
+            content.className = "card";
             content.innerHTML = `
                 <img src="${product.foto}" width="300px">
-            <h3 class=color1>${product.nombre}</h3>
+            <h3 class="color1">${product.nombre}</h3>
             <p class="pcategorias">${product.descripcion}</p>
             <p class="price">${product.precio} €</p>`
             shopContent.append(content); // añadimos div al index con el nombre mostrarexclusivos para que solo muestre los exclusivos
@@ -27,7 +27,7 @@ todos.addEventListener("click", () => {
             let comprar = document.createElement("button");
             // console.log(comprar);
             comprar.innerText = "Comprar";
-            comprar.className = "Comprar";
+            comprar.className = "comprar";
             //  comprar.innerHTML=`<button class="comprar">comprar</button>`
             content.append(comprar);
             comprar.addEventListener("click", () => {
@@ -60,7 +60,7 @@ exclusivo.addEventListener("click", () => {
     almacendequesos.forEach((product) => {
         if (product.categoria == "Exclusivos") {
             let content = document.createElement("div");
-            content.className = "cajas";
+            content.className = "card";
             content.innerHTML = `
                 <img src="${product.foto}" width="300px">
             <h3 class=color1>${product.nombre}</h3>
@@ -72,7 +72,7 @@ exclusivo.addEventListener("click", () => {
             let comprar = document.createElement("button");
             // console.log(comprar);
             comprar.innerText = "Comprar";
-            comprar.className = "Comprarexclusivos";
+            comprar.className = "comprar";
             //  comprar.innerHTML=`<button class="comprar">comprar</button>`
             content.append(comprar);
             comprar.addEventListener("click", () => {
@@ -103,7 +103,7 @@ novedad.addEventListener("click", () => {
     almacendequesos.forEach((product) => {
         if (product.categoria == "Novedades") {
             let content = document.createElement("div");
-            content.className = "cajas";
+            content.className = "card";
             content.innerHTML = `
             <img src="${product.foto}" width="300px">
             <h3 class=color1>${product.nombre}</h3>
@@ -113,7 +113,7 @@ novedad.addEventListener("click", () => {
             shopContent.append(content);
             let comprar = document.createElement("button");
             comprar.innerText = "Comprar";
-            comprar.className = "ComprarNovedades";
+            comprar.className = "comprar";
             content.append(comprar);
             content.append(comprar);
             comprar.addEventListener("click", () => {
@@ -140,10 +140,10 @@ productosdestacados.addEventListener("click", () => {
     almacendequesos.forEach((product) => {
         if (product.categoria == "Productos destacados") {
             let content = document.createElement("div");
-            content.className = "cajas";
+            content.className = "card";
             content.innerHTML = `
             <img src="${product.foto}" width="300px">
-            <h3 class=color2>${product.nombre}</h3>
+            <h3 class=color1>${product.nombre}</h3>
             <p class="pcategorias">${product.descripcion}</p>
             <p class="price">${product.precio} €</p>`;
 
@@ -177,6 +177,5 @@ productosdestacados.addEventListener("click", () => {
 //creamos un elemento div que se llama content se guarda como variable.
 //Este content añadismos dentro del su html añadimos el h3 que tiene el id de la array de queso.
 //el append guarda el contentido dentro del shopconten que es el div que tiene el contenido prueba.
-
 
 

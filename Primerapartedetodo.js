@@ -3,15 +3,25 @@ const verCarrito = document.getElementById("verCarrito");
 const modalContainer = document.getElementById("modal-container");
 const showAlert = document.getElementById("showAlert");
 const cantidadCarrito = document.getElementById("cantidadCarrito");
-
+const usuario=document.getElementById("usuario");
+const buscador=document.getElementById("buscador")
 var carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 //esta línea de código esta recuperando un objeto guardado en el almacenamiento del navegador con nombre "carrito" y lo esta convirtiendo en un objeto javascript. En caso de no existir el objeto, se asigna un arreglo vacío a la variable "carrito"
+usuario.addEventListener("click", () => {
+  alert ("no esta disponible")
+});
+
+buscador.addEventListener("click", () => {
+  alert ("no esta disponible")
+});
+
+
 almacendequesos.forEach((product) => {
     let content = document.createElement("div");
     content.className = "card";
     content.innerHTML = `
       <img src="${product.foto}" width="300px">
-      <h3>${product.nombre}</h3>
+      <h3 class="color1">${product.nombre}</h3>
       <p class="price">${product.precio} €</p>`;
   
     shopContent.append(content);
